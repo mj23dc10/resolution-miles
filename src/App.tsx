@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const totalMiles = localStorage.getItem('totalMiles');
     totalMiles === null ? setTotalMiles(0) : setTotalMiles(parseFloat(totalMiles));
-  },[]);
+  }, []);
 
   function isLeapYear() {
     var date = new Date();
@@ -48,19 +48,21 @@ function App() {
     var newMiles = totalMiles + milesToAdd;
     setTotalMiles(newMiles);
     localStorage.setItem('totalMiles', newMiles.toString());
-  } 
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>Current Miles: {totalMiles}</p>
-        <p>Should have {milesYouShouldHaveByToday()} miles.</p>
-        <form onSubmit={addMilesHandler}>
-          <label>Add miles:
-           <input type="text" name="miles" onChange={addMilesChangeHandler}/>
-          </label>
-          <input type="submit" value="Add" />
-        </form>
+        <div className="Row">
+          <text className="statuslabel">Go 500 miles:</text>
+          <text className="status"> {totalMiles} of {milesYouShouldHaveByToday()} -----</text>
+          <form className="inputsubmit" onSubmit={addMilesHandler}>
+            <label className="statuslabel">
+              <input className="input" type="text" name="miles" onChange={addMilesChangeHandler} />
+            </label>
+            <input className="submit" type="submit" value="Add" />
+          </form>
+        </div>
       </header>
     </div>
   );

@@ -22,6 +22,35 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* background-color: green; */
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+}
+
+.statuslabel {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.status{
+  margin-right: 10px;
+}
+
+.inputsubmit {
+  /* background-color: orange; */
+}
+
+.input{
+  font-size: calc(8px + 2vmin);
+  width:75px
+}
+
+.submit{
+  font-size: calc(8px + 2vmin);
 }
 
 .App-link {
