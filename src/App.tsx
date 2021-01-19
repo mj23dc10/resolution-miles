@@ -54,7 +54,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="Row">
-          <text className="statuslabel">500 miles:</text>
+          <text className="statuslabel">500 mile:</text>
           <text className="status"> {totalMiles} of {milesYouShouldHaveByToday()}---</text>
           <form className="inputsubmit" onSubmit={addMilesHandler}>
             <label className="statuslabel">
